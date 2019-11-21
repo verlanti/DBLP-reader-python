@@ -344,10 +344,7 @@ class Union_layout(Frame):
 
 
    def get(self,title_pub,year,author,title_venue,publisher,chk_state_both,rank_text):
-        # if all(p.get() == 0 for p in chk_state_both[0:3]) or all(p.get() == 0 for p in chk_state_both[3:5]):
-        #        messagebox.showerror("Error", "Publication or Venue not insert")
-        #        return
-
+        
          if all(x.get() == 0 for x in chk_state_both):
             return
 
@@ -401,16 +398,7 @@ class Union_layout(Frame):
                     #result_pub.extend(query.Query.ricerca('index/Inproceedings_cross',content,rank_text))
          if chk_state_both[6].get() == 1: result_venue.extend(query.Query.ricerca('index/book',content_venue,rank_text))#print("Hai selezionato book")
          if chk_state_both[7].get() == 1: result_venue.extend(query.Query.ricerca('index/Proceedings',content_venue,rank_text))#print("Hai selezionato inproceedings")
-         #if chk_state_both[5].get() == 1: #print("Hai selezionato publication")
-        #            result_pub.extend(query.Query.ricerca('index/article',content,rank_text))
-                    #result_pub.extend(query.Query.ricerca('index/article_cross',content,rank_text))
-        #            result_pub.extend(query.Query.ricerca('index/phd',content,rank_text))
-        #            result_pub.extend(query.Query.ricerca('index/master',content,rank_text))
-        #            result_pub.extend(query.Query.ricerca('index/Incollection',content,rank_text))
-                    #result_pub.extend(query.Query.ricerca('index/Incollection_cross',content,rank_text))
-        #            result_pub.extend(query.Query.ricerca('index/Inproceedings',content,rank_text))
-                #    result_pub.extend(query.Query.ricerca('index/Inproceedings_cross',content,rank_text))
-
+         
          results_union_pub,results_union_venue = self.concatenate(result_pub,result_venue)
 
          union = results_union_pub
