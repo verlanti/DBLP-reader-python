@@ -1,5 +1,5 @@
 # DBLP-reader-python
-Sample of DBLP reader in python
+Example of DBLP reader in python
 
 Progetto creato da Palazzi Luca  e Verlanti Emanuele 
 
